@@ -4,13 +4,10 @@ weaponPosY = 379
 dummyX = 1168
 dummyY = 384
 
-weapons = 40
-backpacks = 2
-
-iterations := weapons + backpacks
+slots = 51
 
 Esc::
-Loop, %iterations%
+Loop, %slots%
 {
     if (Mod(A_Index, 20) == 0) {
         MouseClick, Right, weaponPosX, weaponPosY
