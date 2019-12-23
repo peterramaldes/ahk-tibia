@@ -11,10 +11,12 @@ Loop, %slots%
 {
     if (Mod(A_Index, 20) == 0) {
         MouseClick, Right, weaponPosX, weaponPosY
+        Sleep, 500
     } else {
         MouseClick, Right, weaponPosX, weaponPosY
+        Sleep, 200
         MouseClick, Left, dummyX, dummyY
-        Sleep, 9300 ; 15 minutos e meio cada arma.
+        Sleep, 930000 ; 15 minutos e meio cada arma.
     }
 }
 return
