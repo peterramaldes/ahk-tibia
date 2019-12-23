@@ -9,6 +9,6 @@ Loop, %weapons%
     Send, ^{F1}
     Sleep, 200
     MouseClick, Left, dummyX, dummyY
-    Sleep, 930000 ; 15 minutos e meio cada arma.
+    Sleep, 984500
 }
 return
