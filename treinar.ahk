@@ -1,7 +1,9 @@
-dummyX = 1134
-dummyY = 349
+dummyX = 909
+dummyY = 690
 
-weapons = 37
+weapons = 40
+
+iterations := %weapons% * 2
 
 Esc::
 Loop, %weapons%
@@ -9,6 +11,6 @@ Loop, %weapons%
     Send, ^{F1}
     Sleep, 200
     MouseClick, Left, dummyX, dummyY
-    Sleep, 984500
+    Sleep, 300000
 }
 return
