@@ -6,7 +6,7 @@ weapons = 40
 iterations := %weapons% * 2
 
 Esc::
-Loop, %weapons%
+Loop, %iterations%
 {
     Send, ^{F1}
     Sleep, 200
