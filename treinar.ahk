@@ -3,7 +3,7 @@ dummyY = 690
 
 weapons = 40
 
-iterations := %weapons% * 2
+iterations := weapons * 2
 
 Esc::
 Loop, %iterations%
