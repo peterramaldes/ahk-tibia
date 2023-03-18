@@ -1,6 +1,4 @@
-Home::Main
 
-Main(){
-  MouseGetPos &xpos, &ypos 
-  MsgBox "The cursor is at X: " xpos " Y: " ypos
+getMousePositions(&x, &y){
+  MouseGetPos &x, &y 
 }
