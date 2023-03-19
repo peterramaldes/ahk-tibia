@@ -8,5 +8,5 @@ Main() {
   x := 1573
   y := 377
 
-  Click x, y
+  MouseClick "left", x, y
 }
