@@ -1,0 +1,54 @@
+﻿#include ../utils/timer.ahk
+
+Pause::Pause
+F12::Reload
+F11::Main()
+
+Main() {
+	hotkey_food = "<+{F3}"
+	hotkey_runa = "<+{F4}" 
+	hotkey_fishing = "<^<+0" 
+	qtd_tick_runa := 1
+	window_char_pid := "10664" 
+	pos_x_mana := 387
+	pos_y_mana := 374 
+	cor_sem_mana := 0x925327
+
+	Loop,
+	{
+		WinActivate ahk_pid %window_char_pid%
+		Sleep, 500
+
+		; Food
+		If Timer("Food")
+		{
+			Loop, 5
+			{
+				Send, %hotkey_food%
+				Sleep, 70
+			}
+			Timer("Food", 120000)
+		}
+		
+		; Runa
+		PixelGetcolor,Pix,%pos_x_mana%,%pos_y_mana%
+		IfNotEqual,Pix,%cor_sem_mana%,{
+			Loop, %qtd_tick_runa%
+			{
+				Send, %hotkey_runa%
+				Sleep, 300
+			}
+		}
+
+		; Fishing
+		sqms := Object(1610, 825)
+		For k, v in sqms {
+			Send ^+0
+			Sleep 300
+			Click %k%, %v%, Left
+			Sleep 300
+		}
+
+		Sleep, 2500
+	}
+}
